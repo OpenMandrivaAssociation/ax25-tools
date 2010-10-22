@@ -7,7 +7,7 @@ Name:           %{name}
 Version:        %{version}
 Release:        %mkrel -c %{prerel} %{rel}
 Summary:        Tools used to configure an ax.25 enabled computer
-Group:          Applications/Communications
+Group:          Communications
 License:        GPLv2+
 URL:            http://www.linux-ax25.org/wiki/LinuxAX25
 Source0:        http://www.linux-ax25.org/pub/%{name}/%{name}-%{version}-%{prerel}.tar.gz
