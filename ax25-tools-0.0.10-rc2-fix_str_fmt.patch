@@ -1,0 +1,107 @@
+diff -p -up ./ax25/axparms.c.orig ./ax25/axparms.c
+--- ./ax25/axparms.c.orig	2010-10-22 13:18:29.000000000 +0200
++++ ./ax25/axparms.c	2010-10-22 13:18:57.000000000 +0200
+@@ -139,7 +139,7 @@ PROC_AX25_ROUTE_FILE);
+ 			return 1;
+ 		}
+ 		while (fgets(routebuf,80,fp))
+-			printf(routebuf);
++			printf("%s", routebuf);
+ 		puts("");
+ 	}
+ 
+diff -p -up ./kiss/mkiss.c.orig ./kiss/mkiss.c
+--- ./kiss/mkiss.c.orig	2010-10-22 13:21:52.000000000 +0200
++++ ./kiss/mkiss.c	2010-10-22 13:23:46.000000000 +0200
+@@ -463,18 +463,18 @@ int main(int argc, char *argv[])
+ 			return 1;
+ 		case ':':
+ 		case '?':
+-			fprintf(stderr, usage_string);
++			fprintf(stderr, "%s", usage_string);
+ 			return 1;
+ 		}
+ 	}
+ 
+ 	if ((argc - optind) < 2 && ptmxdevices == 0) {
+-		fprintf(stderr, usage_string);
++		fprintf(stderr, "%s", usage_string);
+ 		return 1;
+ 	}
+ 
+ 	if ((argc - optind) < 1 && ptmxdevices > 0) {
+-		fprintf(stderr, usage_string);
++		fprintf(stderr, "%s", usage_string);
+ 		return 1;
+ 	}
+ 
+diff -p -up ./6pack/m6pack.c.orig ./6pack/m6pack.c
+--- ./6pack/m6pack.c.orig	2010-10-22 13:25:52.000000000 +0200
++++ ./6pack/m6pack.c	2010-10-22 13:26:21.000000000 +0200
+@@ -487,18 +487,18 @@ int main(int argc, char *argv[])
+ 			return 1;
+ 		case ':':
+ 		case '?':
+-			fprintf(stderr, usage_string);
++			fprintf(stderr, "%s", usage_string);
+ 			return 1;
+ 		}
+ 	}
+ 
+ 	if ((argc - optind) < 2 && ptmxdevices == 0) {
+-		fprintf(stderr, usage_string);
++		fprintf(stderr, "%s", usage_string);
+ 		return 1;
+ 	}
+ 
+ 	if ((argc - optind) < 1 && ptmxdevices > 0) {
+-		fprintf(stderr, usage_string);
++		fprintf(stderr, "%s", usage_string);
+ 		return 1;
+ 	}
+ 
+diff -p -up ./netrom/nrparms.c.orig ./netrom/nrparms.c
+--- ./netrom/nrparms.c.orig	2010-10-22 13:28:26.000000000 +0200
++++ ./netrom/nrparms.c	2010-10-22 13:28:56.000000000 +0200
+@@ -210,7 +210,7 @@ int main(int argc, char *argv[])
+ 	
+ 	if (strncmp(argv[1], "-n", 2) == 0) {
+ 		if (argc < 9) {
+-			fprintf(stderr, nodes_usage);
++			fprintf(stderr, "%s", nodes_usage);
+ 			close(s);
+ 			return 1;
+ 		}
+@@ -221,7 +221,7 @@ int main(int argc, char *argv[])
+ 
+ 	if (strncmp(argv[1], "-r", 2) == 0) {
+ 		if (argc < 6) {
+-			fprintf(stderr, routes_usage);
++			fprintf(stderr, "%s", routes_usage);
+ 			close(s);
+ 			return 1;
+ 		}
+diff -p -up ./rose/rsparms.c.orig ./rose/rsparms.c
+--- ./rose/rsparms.c.orig	2010-10-22 13:32:10.000000000 +0200
++++ ./rose/rsparms.c	2010-10-22 13:32:26.000000000 +0200
+@@ -66,7 +66,7 @@ void nodes(int s, int argc, char *argv[]
+ 	int args;
+ 
+ 	if (argc < 3) {
+-		fprintf(stderr, nodes_usage);
++		fprintf(stderr, "%s", nodes_usage);
+ 		exit(1);
+ 	}
+ 
+diff -p -up ./rose/rsparms.c.orig ./rose/rsparms.c
+--- ./rose/rsparms.c.orig	2010-10-22 13:34:01.000000000 +0200
++++ ./rose/rsparms.c	2010-10-22 13:34:18.000000000 +0200
+@@ -112,7 +112,7 @@ void nodes(int s, int argc, char *argv[]
+ 	}
+ 
+ 	if (argc < 6) {
+-		fprintf(stderr, nodes_usage);
++		fprintf(stderr, "%s", nodes_usage);
+ 		exit(1);
+ 	}
+ 
