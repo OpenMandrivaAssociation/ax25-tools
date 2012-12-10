@@ -50,3 +50,11 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_sbindir}/*
 %{_mandir}/man*/*
+
+
+%changelog
+* Fri Oct 22 2010 Jani Välimaa <wally@mandriva.org> 0.0.10-0.rc2.1mdv2011.0
++ Revision: 587258
+- fix group
+- import ax25-tools
+
