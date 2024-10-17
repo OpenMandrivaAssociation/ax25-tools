@@ -9,7 +9,7 @@ Release:        %mkrel -c %{prerel} %{rel}
 Summary:        Tools used to configure an ax.25 enabled computer
 Group:          Communications
 License:        GPLv2+
-URL:            http://www.linux-ax25.org/wiki/LinuxAX25
+URL:            https://www.linux-ax25.org/wiki/LinuxAX25
 Source0:        http://www.linux-ax25.org/pub/%{name}/%{name}-%{version}-%{prerel}.tar.gz
 Patch0:		ax25-tools-0.0.10-rc2-fix_str_fmt.patch
 Patch1:		ax25-tools-0.0.10-rc2-fix_linking.patch
