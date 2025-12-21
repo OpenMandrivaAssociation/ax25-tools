@@ -14,6 +14,11 @@ Source0:        http://www.linux-ax25.org/pub/%{name}/%{name}-%{version}-%{prere
 Patch0:		ax25-tools-0.0.10-rc2-fix_str_fmt.patch
 Patch1:		ax25-tools-0.0.10-rc2-fix_linking.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  libax25-devel
 BuildRequires:  ncurses-devel
 BuildRequires:  libxt-devel
