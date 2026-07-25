@@ -5,7 +5,7 @@
 
 Name:           %{name}
 Version:        %{version}
-Release:        %mkrel -c %{prerel} %{rel}
+Release:        -c %{prerel} %{rel}.1
 Summary:        Tools used to configure an ax.25 enabled computer
 Group:          Communications
 License:        GPLv2+
